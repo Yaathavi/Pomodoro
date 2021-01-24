@@ -1,0 +1,55 @@
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans:wght@700&display=swap');
+
+.background {
+  background-image: url("https://webgradients.com/public/webgradients_png/005%20Young%20Passion.png");
+  background-color: #cccccc;
+
+}
+
+.App-header{
+  text-align: center;
+  height: 11vh;
+  font-size: 3.5vh; 
+ font-family: 'Josefin Sans';
+  color: 	#ffffff;
+  /*	#070635 */
+  
+}
+
+.App{
+ 
+  /* background-color:#253761; */
+  min-height: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  font-family: 'Montserrat', serif;
+  color: #ffffff;
+  font-size: 1.7vh;
+  
+}  
+
+.App-div{
+ 
+  /* background-color:#253761; */
+  min-height: 2vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-decoration: bold;
+  font-family: 'Montserrat';
+  color: #f0edf6;
+  font-size: 1.7vh;
+  
+}  
