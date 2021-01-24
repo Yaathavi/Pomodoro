@@ -32,7 +32,7 @@ export default class Timer extends Component {
     handle = () => {
         clearInterval(this.timer);
         this.setState({isOn: false, defaultTime: this.state.time})
-        console.log("nikashan is the reason this is not working");
+      
     }
 
     startTimer = () => {
@@ -49,7 +49,6 @@ export default class Timer extends Component {
             })  
 
             if (this.state.time <500 && this.state.time > -500) {
-                console.log("hi")
                 this.handle()
              }
 
