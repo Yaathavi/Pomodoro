@@ -11,8 +11,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans:wght@700&display=swap');
 
 .background {
-  background-image: url("https://webgradients.com/public/webgradients_png/005%20Young%20Passion.png");
-  background-color: #cccccc;
+  /* background-image: url("https://webgradients.com/public/webgradients_png/005%20Young%20Passion.png"); */
+  /* background-image: url("https://webgradients.com/public/webgradients_png/022%20Morpheus%20Den.png"); */
+  /* background-color: #cccccc; */
 
 }
 
@@ -28,28 +29,77 @@
 
 .App{
  
-  /* background-color:#253761; */
-  min-height: 2vh;
+
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   
   font-family: 'Montserrat', serif;
   color: #ffffff;
-  font-size: 1.7vh;
+  font-size: 2vh;
   
 }  
 
 .App-div{
- 
-  /* background-color:#253761; */
-  min-height: 2vh;
+
+  position: relative;
   display: flex;
   flex-direction: column; 
   align-items: center;
   text-decoration: bold;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat'; 
   color: #f0edf6;
-  font-size: 1.7vh;
-  
+  font-size: 15vh;
+  width: 60vh;
+  height: 40vh;
+  border: 0.5vh solid rgb(225, 230, 233); 
 }  
+
+.Headerr{
+
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}  
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+button{
+ 
+  float: left;
+  margin-right: 5px;
+  font-size: 2vh;
+  /* -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; */
+  /* box-sizing: content-box; */
+  border-radius: 5px 5px 5px 5px;
+  font-family: 'Montserrat';
+  border-width:0px;
+  border:none;
+  cursor: pointer;
+  background-color: #075a81 ;
+  color: #f0e7e6;
+  padding-left: 0.8vw;
+  padding-right: 0.8vw;
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+  }
+
+  .App-div3 {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+/*background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
+ 
