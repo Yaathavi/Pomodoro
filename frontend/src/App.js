@@ -1,5 +1,6 @@
 import './App.css';
 import Timer from './Timer';
+import Tasks from './Tasks';
 
 function App() {
   return (
@@ -12,6 +13,13 @@ function App() {
       </div> 
       {/* <p> Work Time!</p> */}
       <Timer/> 
+
+<div className="App-div4"> 
+  <u> <b> Add Tasks: </b></u>
+</div>
+    <br></br>
+    <br></br>
+    <Tasks/>
     </div>
   );
 }

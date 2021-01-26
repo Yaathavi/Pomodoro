@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Swal from 'sweetalert2'
 import Helmet from 'react-helmet'
-const ms = require("pretty-ms");
 
 export default class Timer extends Component {
 
@@ -173,10 +172,10 @@ export default class Timer extends Component {
 
                 <div className = "App-div3"> 
                 
-                    <button onClick={this.startTimer} style={{ display: (!this.state.isOn && this.state.time == 1*60*1000) ? "block" : "none" }}> start </button> 
-                    <button onClick={this.stopTimer} style={{ display: this.state.isOn ? "block" : "none" }}>stop</button> 
-                    <button onClick={this.restartTimer} style={{ display: (!this.state.isOn && this.state.time != 1*60*1000 && !this.state.onBreak) ? "block" : "none" }}>reset</button>
-                    <button onClick={this.state.onBreak ? this.afterBreak : this.startTimer} style={{ display: (!this.state.isOn && this.state.time != 1*60*1000  && this.state.time > 500) ? "block" : "none" }} >resume</button>
+                    <button className = "idk" onClick={this.startTimer} style={{ display: (!this.state.isOn && this.state.time == 1*60*1000) ? "block" : "none" }}> start </button> 
+                    <button className = "idk" onClick={this.stopTimer} style={{ display: this.state.isOn ? "block" : "none" }}>stop</button> 
+                    <button className = "idk"  onClick={this.restartTimer} style={{ display: (!this.state.isOn && this.state.time != 1*60*1000 && !this.state.onBreak) ? "block" : "none" }}>reset</button>
+                    <button className = "idk" onClick={this.state.onBreak ? this.afterBreak : this.startTimer} style={{ display: (!this.state.isOn && this.state.time != 1*60*1000  && this.state.time > 500) ? "block" : "none" }} >resume</button>
                 </div>
             
                 </div>
