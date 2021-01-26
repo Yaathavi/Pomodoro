@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pomotivity/static/css/main.4dffa415.chunk.css",
+    "main.js": "/pomotivity/static/js/main.da6040b6.chunk.js",
+    "main.js.map": "/pomotivity/static/js/main.da6040b6.chunk.js.map",
+    "runtime-main.js": "/pomotivity/static/js/runtime-main.c4039e61.js",
+    "runtime-main.js.map": "/pomotivity/static/js/runtime-main.c4039e61.js.map",
+    "static/js/2.1ab54b1d.chunk.js": "/pomotivity/static/js/2.1ab54b1d.chunk.js",
+    "static/js/2.1ab54b1d.chunk.js.map": "/pomotivity/static/js/2.1ab54b1d.chunk.js.map",
+    "index.html": "/pomotivity/index.html",
+    "static/css/main.4dffa415.chunk.css.map": "/pomotivity/static/css/main.4dffa415.chunk.css.map",
+    "static/js/2.1ab54b1d.chunk.js.LICENSE.txt": "/pomotivity/static/js/2.1ab54b1d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4039e61.js",
+    "static/js/2.1ab54b1d.chunk.js",
+    "static/css/main.4dffa415.chunk.css",
+    "static/js/main.da6040b6.chunk.js"
+  ]
+}
