@@ -11,7 +11,8 @@ export default class Tasks extends Component {
         super()
         this.state = {
             tasks: [],
-            textField: ""
+            textField: "",
+            taskDivs: []
         }    
     }
 
@@ -19,52 +20,60 @@ export default class Tasks extends Component {
         this.setState ({textField: event.target.value})
     }
 
-
-
     deleteTask = (event) => {
         event.preventDefault();
-        console.log("hi");
-        console.log(document.getElementById(event.target.getAttribute("id")));
-      
+        let taskName = event.target;
+        console.log(taskName);
+        let tempArray = this.state.tasks.filter(e => e !== taskName.innerHTML);
+        console.log(tempArray);
+        
+        let tempDiv = this.state.taskDivs;
+        for(let i=0; i<this.state.taskDivs.length; i++){
+            if(this.state.taskDivs[i].props.children.props.children[0].props.children.props.children == taskName.innerHTML){
+                tempDiv.splice(i,1);
+                break;
+            }
+        }
+        this.setState({tasks: tempArray, taskDivs: tempDiv, textField: ""});
+        console.log(this.state.taskDivs);
+        document.getElementById("add").click();
+  
     }
 
     addTask = (event) => {
         event.preventDefault();
-        var joined = this.state.tasks.concat(
 
-    <div style={{width: "70%", margin: "0 auto", paddingTop: "3vh"}}> 
-     {/* <button className = "check" style={{display: 'inline-block', marginRight:"3vh", marginTop:"-2vh", textAlign: "center", height:"3vh", width:"3vh"}}>  </button>   */}
+        if(this.state.tasks.includes(this.state.textField)){
+            this.setState ({textField: ""});
+        } else {
+            var joined = this.state.tasks.concat(
+                this.state.textField
+            ) 
+            var divList = this.state.taskDivs.concat(
+            <div style={{width: "70%", margin: "0 auto", paddingTop: "3vh"}}> 
+            <a onClick={this.deleteTask}>
+                <div className = "card" style={{display: 'inline-block', textAlign: "center"}}> 
+                    <div>{this.state.textField}</div>
+                    {/* <div style={{marginLeft:"65vh", marginTop:"-2vh"}}><FontAwesomeIcon icon={faTrashAlt}/></div> */}
+                </div> </a> 
+             </div>
+            )
+            this.setState ({tasks: joined, taskDivs: divList, textField: ""});
+        }
+    }
 
-      <div className = "card" style={{display: 'inline-block', textAlign: "center"}}> 
-      {this.state.textField}  
-      <div style={{marginLeft:"65vh", marginTop:"-2vh"}}> <a onClick={this.deleteTask}> <FontAwesomeIcon icon={faTrashAlt}/> </a> </div> 
-      </div> 
-    </div>
-
-        ) 
-        this.setState ({tasks: joined, textField: ""});
-      }
-   
     render() {
         return(     
             <div> 
                 <form>
-                    
                     <input 
                         type='text'
                         onChange={this.changeHandler}
                         style={{ width:"80vh" }} value= {this.state.textField}/>
-                        
-                        <button className = "button" onClick={this.addTask} style={{marginLeft: "2vh"}}> Add Task </button>
-
+                        <button id="add" className = "button" onClick={this.addTask} style={{marginLeft: "2vh"}}> Add Task </button>
                 </form > 
-
-                <div>
-                   {this.state.tasks}
-                </div>
-
+                   {this.state.taskDivs}
             </div>
-    
         )
     }
 } 
