@@ -1,6 +1,7 @@
 import './App.css';
 import Timer from './Timer';
-import Tasks from './Tasks';
+import Task from './Task';
+
 
 
 
@@ -21,7 +22,7 @@ function App() {
 </div>
     <br></br>
     <br></br>
-    <Tasks/>
+    <Task/>
     </div>
   );
 }

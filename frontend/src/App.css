@@ -18,7 +18,6 @@
 }
 
 
-
 .App-header{
   text-align: center;
   height: 11vh;
@@ -30,7 +29,7 @@
 }
 
 .App{
-  min-height: 50vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,9 +99,7 @@ body {
   padding-top: 0.8vw;
   padding-bottom: 0.8vw;
   }
-   
-
-   
+      
 
   .App-div3 {
     margin: 0;
