@@ -18,6 +18,7 @@ class Task extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.addTask = this.addTask.bind(this);
+    this.deleteTask = this.deleteTask.bind(this);
   }
 
   //what happens when u type into the input field
@@ -46,6 +47,14 @@ class Task extends React.Component {
     }
   }
 
+  
+  deleteTask(key){
+    const filteredTasks = this.state.tasks.filter(task => task.key!==key); //creates new array with tasks that dont match the deleted one
+    this.setState({
+        tasks: filteredTasks
+    })
+  }
+
   render(){
     return (
       <div className="App">
@@ -53,10 +62,10 @@ class Task extends React.Component {
             <input type ="text" placeholder="Enter text" value={this.state.currentTask.text} style={{ width:"80vh" }} onChange={this.handleChange}/>
             <button id="second" type="submit" style={{marginLeft: "2vh"}}> Add Task </button>
           </form>
-        <ListItem tasks = {this.state.tasks} />
+        <ListItem tasks = {this.state.tasks} deleteTask = {this.deleteTask}/>
       </div>
     )
   }
-}
+} 
 
 export default Task;
