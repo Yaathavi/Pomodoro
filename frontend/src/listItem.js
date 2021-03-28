@@ -9,7 +9,15 @@ function ListItem(props){
         return(
             <div className = "list" key = {task.key}> 
                 <p> 
-                    {task.text} 
+                    <input type="text" 
+                    id={task.key} 
+                    value={task.text}
+                    onChange={
+                        (e)=>{
+                            props.updateTask(e.target.value, task.key)
+                        }
+                    }/>
+                        
                     <span> 
                         <FontAwesomeIcon className="icons" 
                         icon={faTrashAlt} 
@@ -19,7 +27,7 @@ function ListItem(props){
                 </p>
             </div>
         )
-    })
+    }) 
 
     return(
         <div>{taskList}</div>

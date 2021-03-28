@@ -19,6 +19,7 @@ class Task extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.addTask = this.addTask.bind(this);
     this.deleteTask = this.deleteTask.bind(this);
+    this.updateTask = this.updateTask.bind(this);
   }
 
   //what happens when u type into the input field
@@ -55,6 +56,18 @@ class Task extends React.Component {
     })
   }
 
+  updateTask(text, key){
+    const tasks = this.state.tasks;
+    tasks.map(task=>{
+        if(task.key===key){
+            task.text=text;
+        }
+    })
+    this.setState({
+        tasks: tasks
+    })
+  }
+
   render(){
     return (
       <div className="App">
@@ -62,7 +75,7 @@ class Task extends React.Component {
             <input type ="text" placeholder="Enter text" value={this.state.currentTask.text} style={{ width:"80vh" }} onChange={this.handleChange}/>
             <button id="second" type="submit" style={{marginLeft: "2vh"}}> Add Task </button>
           </form>
-        <ListItem tasks = {this.state.tasks} deleteTask = {this.deleteTask}/>
+        <ListItem tasks = {this.state.tasks} deleteTask = {this.deleteTask} updateTask = {this.updateTask} />
       </div>
     )
   }
