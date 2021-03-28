@@ -1,3 +1,3 @@
 # Pomodoro
 
-~ Not finished ~
+Pomodoro timer + To-do list combined in one :) 
